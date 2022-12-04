@@ -1,0 +1,41 @@
+From 4966f9d3874ddf7eddb365ee8987364a6bbde285 Mon Sep 17 00:00:00 2001
+From: Yakun Ouyang <yakun@hnu.edu.cn>
+Date: Sun, 4 Dec 2022 18:15:07 +0800
+Subject: [PATCH] Added install rule for package.xml
+
+---
+ CMakeLists.txt | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 19e4d02..177f202 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -212,7 +212,7 @@ endif()
+ ############################################################
+ ################# WITH_COMMON option #######################
+ ############################################################
+-option(WITH_COMMON "Build common, stable interfaces, if found" OFF)
++option(WITH_COMMON "Build common, stable interfaces, if found" ON)
+ if(WITH_COMMON)
+   # Look for LAPACK
+   find_package(LAPACK QUIET)
+@@ -264,7 +264,7 @@ if(WITH_OPENMP)
+ endif()
+ 
+ # enabling Threads support if requested
+-option(WITH_THREAD "Compile with parallelization support" OFF)
++option(WITH_THREAD "Compile with parallelization support" ON)
+ option(WITH_THREAD_MINGW "For MINGW, use mingw-std-threads" OFF)
+ if(WITH_THREAD)
+   add_definitions(-DCASADI_WITH_THREAD)
+@@ -902,3 +902,6 @@ install(EXPORT casadi-targets DESTINATION ${REL_CMAKE_PREFIX})
+ set(CPACK_PACKAGE_CONTACT "casadi-users@googlegroups.com")
+ set(CPACK_PACKAGE_VERSION ${PACKAGE_VERSION_FULL})
+ include(CPack)
++
++# Install catkin package.xml
++install(FILES package.xml DESTINATION share/casadi)
+-- 
+2.17.1
+
