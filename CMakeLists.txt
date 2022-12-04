@@ -212,7 +212,7 @@ endif()
 ############################################################
 ################# WITH_COMMON option #######################
 ############################################################
-option(WITH_COMMON "Build common, stable interfaces, if found" ON)
+option(WITH_COMMON "Build common, stable interfaces, if found" OFF)
 if(WITH_COMMON)
   # Look for LAPACK
   find_package(LAPACK QUIET)
@@ -264,7 +264,7 @@ if(WITH_OPENMP)
 endif()
 
 # enabling Threads support if requested
-option(WITH_THREAD "Compile with parallelization support" ON)
+option(WITH_THREAD "Compile with parallelization support" OFF)
 option(WITH_THREAD_MINGW "For MINGW, use mingw-std-threads" OFF)
 if(WITH_THREAD)
   add_definitions(-DCASADI_WITH_THREAD)
@@ -902,6 +902,3 @@ install(EXPORT casadi-targets DESTINATION ${REL_CMAKE_PREFIX})
 set(CPACK_PACKAGE_CONTACT "casadi-users@googlegroups.com")
 set(CPACK_PACKAGE_VERSION ${PACKAGE_VERSION_FULL})
 include(CPack)
-
-# Install catkin package.xml
-install(FILES package.xml DESTINATION share/casadi)
