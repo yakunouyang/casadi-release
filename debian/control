@@ -1,0 +1,12 @@
+Source: ros-noetic-casadi
+Section: misc
+Priority: optional
+Maintainer: Yakun Ouyang <yakun@hnu.edu.cn>
+Build-Depends: debhelper (>= 9.0.0), cmake, coinor-libipopt-dev, gfortran, liblapack-dev, pkg-config
+Homepage: https://web.casadi.org/
+Standards-Version: 3.9.2
+
+Package: ros-noetic-casadi
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, coinor-libipopt-dev, gfortran, liblapack-dev, pkg-config
+Description: The CasADi library from https://web.casadi.org/
