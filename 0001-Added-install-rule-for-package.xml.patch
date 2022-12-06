@@ -1,4 +1,4 @@
-From 126353987cf4e108c1964f4643cd1f35c121fafe Mon Sep 17 00:00:00 2001
+From 5ae0bd34143fd297d769744161490c1d06bac459 Mon Sep 17 00:00:00 2001
 From: Yakun Ouyang <yakun@hnu.edu.cn>
 Date: Sun, 4 Dec 2022 18:15:07 +0800
 Subject: [PATCH] Added install rule for package.xml
