@@ -10,6 +10,7 @@
   <maintainer email="yakun@hnu.edu.cn">Yakun Ouyang</maintainer>
   <license>LGPL-3.0</license>
 
+  <exec_depend>catkin</exec_depend>
   <buildtool_depend>cmake</buildtool_depend>
   <build_depend>cmake</build_depend>
   
